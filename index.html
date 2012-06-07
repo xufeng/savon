@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Savon by rubiii</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Savon</h1>
+        <p>Heavy metal SOAP client</p>
+        <p class="view"><a href="https://github.com/rubiii/savon">View the Project on GitHub <small>rubiii/savon</small></a></p>
+        <ul>
+          <li><a href="https://github.com/rubiii/savon/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rubiii/savon/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rubiii/savon">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Savon <a href="http://travis-ci.org/rubiii/savon"><img src="https://secure.travis-ci.org/rubiii/savon.png" alt="Build Status"></a>
+</h1>
+
+<p>Heavy metal Ruby SOAP client</p>
+
+<p><a href="http://savonrb.com">Documentation</a> | <a href="http://rubydoc.info/gems/savon">RDoc</a> |
+<a href="https://groups.google.com/forum/#!forum/savonrb">Mailing list</a> | <a href="http://twitter.com/savonrb">Twitter</a></p>
+
+<h2>Installation</h2>
+
+<p>Savon is available through <a href="http://rubygems.org/gems/savon">Rubygems</a> and can be installed via:</p>
+
+<pre><code>$ gem install savon
+</code></pre>
+
+<h2>Introduction</h2>
+
+<div class="highlight">
+<pre><span class="nb">require</span> <span class="s2">"savon"</span>
+
+<span class="c1"># create a client for your SOAP service</span>
+<span class="n">client</span> <span class="o">=</span> <span class="no">Savon</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s2">"http://service.example.com?wsdl"</span><span class="p">)</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">wsdl</span><span class="o">.</span><span class="n">soap_actions</span>
+<span class="c1"># =&gt; [:create_user, :get_user, :get_all_users]</span>
+
+<span class="c1"># execute a SOAP request to call the "getUser" action</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="ss">:get_user</span><span class="p">)</span> <span class="k">do</span>
+  <span class="n">soap</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:id</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="k">end</span>
+
+<span class="n">response</span><span class="o">.</span><span class="n">body</span>
+<span class="c1"># =&gt; { :get_user_response =&gt; { :first_name =&gt; "The", :last_name =&gt; "Hoff" } }</span>
+</pre>
+</div>
+
+
+<h2>Documentation</h2>
+
+<p>Continue reading at <a href="http://savonrb.com">savonrb.com</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/rubiii">rubiii</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
