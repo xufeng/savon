@@ -21,8 +21,6 @@ module Savon
 
       # XML Schema Type namespaces.
       SCHEMA_TYPES = {
-        "xmlns:xsd" => "http://www.w3.org/2001/XMLSchema",
-        "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance",
         "xmlns:v2" => "http://api.baidu.com/sem/common/v2",
         "xmlns:v21" => "https://api.baidu.com/sem/sms/v2"
       }
