@@ -22,7 +22,7 @@ module Savon
       # XML Schema Type namespaces.
       SCHEMA_TYPES = {
         "xmlns:xsd" => "http://www.w3.org/2001/XMLSchema",
-        "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance"
+        "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance"11
       }
 
       # Expects a +config+ object.
